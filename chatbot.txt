@@ -1,1 +1,54 @@
+Hello, hi, greetings, sup, what's up, hey, how are you
+- Hello! How can I help you today?
+- Hi there! What can I do for you?
+- Hello! How can I assist you?
 
+How are you?
+- I'm just a computer program, so I don't have feelings, but I'm here to help you!
+- I'm doing well, thank you! How can I assist you today?
+
+What is your name?
+- I'm Infinibot, your friendly chatbot.
+
+What can you do?
+- I can chat with you, answer questions, and help with information. What would you like to know?
+- I'm here to assist you with any questions you have. Feel free to ask me anything!
+
+What is the capital of France?
+- The capital of France is Paris.
+
+Who wrote "Pride and Prejudice"?
+- "Pride and Prejudice" was written by Jane Austen.
+
+What is the tallest mountain in the world?
+- The tallest mountain in the world is Mount Everest.
+
+What's the weather like today?
+- I can't provide real-time weather updates, but you can check a weather website or app for the latest information.
+
+Will it rain tomorrow?
+- I recommend checking a weather service like Weather.com or a weather app for the most accurate forecast.
+
+What is AI?
+- AI stands for Artificial Intelligence, which is the simulation of human intelligence in machines that are programmed to think and learn.
+
+What is machine learning?
+- Machine learning is a subset of AI that involves the development of algorithms that allow computers to learn from and make decisions based on data.
+
+What are some popular movies right now?
+- Some popular movies currently are [Movie A], [Movie B], and [Movie C]. You can check out reviews and ratings on websites like IMDb or Rotten Tomatoes.
+
+Can you recommend a book?
+- Sure! If you like fiction, you might enjoy "The Great Gatsby" by F. Scott Fitzgerald. For non-fiction, you could try "Sapiens: A Brief History of Humankind" by Yuval Noah Harari.
+
+How do I get to the nearest coffee shop?
+- You can use a maps service like Google Maps. Just type in "nearest coffee shop" and it will give you directions.
+
+What is the best route to [Destination]?
+- I suggest using a GPS service or app like Google Maps or Waze for real-time route information and traffic updates.
+
+I'm having trouble logging in.
+- I'm sorry to hear that. Please make sure you are using the correct username and password. If you've forgotten your password, you can reset it by clicking "Forgot Password" on the login page.
+
+My account is locked.
+- If your account is locked, you may need to contact customer support to unlock it. They will be able to assist you further.
