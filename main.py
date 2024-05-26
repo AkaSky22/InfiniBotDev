@@ -1,6 +1,3 @@
-# Meet Infinibot: your friend
-
-# import necessary libraries
 import io
 import random
 import string
@@ -8,12 +5,12 @@ import warnings
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-import warnings
-warnings.filterwarnings('ignore')
-
 import nltk
 from nltk.stem import WordNetLemmatizer
-nltk.download('popular', quiet=True)
+nltk.download('punkt')
+nltk.download('wordnet')
+
+warnings.filterwarnings('ignore')
 
 # Reading in the corpus
 with open('chatbot.txt', 'r', encoding='utf8', errors='ignore') as fin:
@@ -25,9 +22,12 @@ word_tokens = nltk.word_tokenize(raw)
 
 # Preprocessing
 lemmer = WordNetLemmatizer()
+
 def LemTokens(tokens):
     return [lemmer.lemmatize(token) for token in tokens]
+
 remove_punct_dict = dict((ord(punct), None) for punct in string.punctuation)
+
 def LemNormalize(text):
     return LemTokens(nltk.word_tokenize(text.lower().translate(remove_punct_dict)))
 
@@ -36,7 +36,6 @@ GREETING_INPUTS = ("hello", "hi", "greetings", "sup", "what's up", "hey", "how a
 GREETING_RESPONSES = ["hello!", "hi!", "hey!", "hi there!", "hello! how can i help you?", "hi! what can i do for you?"]
 
 def greeting(sentence):
-    """If user's input is a greeting, return a greeting response"""
     for word in sentence.split():
         if word.lower() in GREETING_INPUTS:
             return random.choice(GREETING_RESPONSES)
@@ -53,28 +52,26 @@ def response(user_response):
     flat.sort()
     req_tfidf = flat[-2]
     if req_tfidf == 0:
-        infinibot_response = infinibot_response + "I am sorry! I don't understand you."
-        return infinibot_response
+        infinibot_response = "I am sorry! I don't understand you."
     else:
-        infinibot_response = infinibot_response + sent_tokens[idx]
-        return infinibot_response
+        infinibot_response = sent_tokens[idx]
+    sent_tokens.pop(-1)
+    return infinibot_response
 
+# Chatbot Interaction
 flag = True
 print("INFINIBOT: My name is Infinibot. I will answer your queries about Chatbots. If you want to exit, type Bye!")
-while flag == True:
-    user_response = input()
-    user_response = user_response.lower()
+while flag:
+    user_response = input().lower()
     if user_response != 'bye':
-        if user_response == 'thanks' or user_response == 'thank you':
+        if user_response in ['thanks', 'thank you']:
             flag = False
             print("INFINIBOT: You are welcome.")
         else:
             if greeting(user_response) is not None:
                 print("INFINIBOT: " + greeting(user_response))
             else:
-                print("INFINIBOT: ", end="")
-                print(response(user_response))
-                sent_tokens.remove(user_response)
+                print("INFINIBOT: " + response(user_response))
     else:
         flag = False
         print("INFINIBOT: Bye! Take care.")
